@@ -1,0 +1,90 @@
+{
+  "ciudadanos": [
+    {
+      "*Id": "api",
+      "id": 1,
+      "nombre": "John",
+      "apellido": "Nelson",
+      "domicilio": {
+        "calle": "Brasil",
+        "altura": "46"
+      }
+    },
+    {
+      "*Id": "api",
+      "id": 2,
+      "nombre": "Diego",
+      "apellido": "Pedro",
+      "domicilio": {
+        "calle": "La Plata",
+        "altura": "101"
+      }
+    },
+    {
+      "*Id": "api",
+      "id": 3,
+      "nombre": "Van",
+      "apellido": "Untermann",
+      "domicilio": {
+        "calle": "Pavon",
+        "altura": "53"
+      }
+    },
+    {
+      "nombre": "Vladimir",
+      "apellido": "Mortensen",
+      "domicilio": {
+        "calle": "Pavon",
+        "altura": 150
+      },
+      "*Id": "api",
+      "id": 4
+    },
+    {
+      "nombre": "Otto",
+      "apellido": "Perez",
+      "domicilio": {
+        "calle": "Paso",
+        "altura": 521
+      },
+      "*Id": "api",
+      "id": 5
+    },
+    {
+      "nombre": "Fritz",
+      "apellido": "Müller",
+      "domicilio": {
+        "calle": "Clay",
+        "altura": 287
+      },
+      "*Id": "api",
+      "id": 6
+    },
+    {
+      "nombre": "Robert",
+      "apellido": "Blum",
+      "domicilio": {
+        "calle": "Castro",
+        "altura": 156
+      },
+      "*Id": "api",
+      "id": 7
+    }
+  ],
+  "solicitudes": [
+    {
+      "*Id": "api",
+      "id": 1,
+      "nombrePrestacion": "Autos obstruyendo rampas",
+      "rubro": "Seguridad",
+      "refuerzos": 6
+    },
+    {
+      "*Id": "api",
+      "id": 2,
+      "nombrePrestacion": "Luces rotas en facultad de medicina",
+      "rubro": "Limpieza",
+      "refuerzos": 14
+    }
+  ]
+}

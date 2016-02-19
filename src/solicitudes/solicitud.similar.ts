@@ -1,0 +1,1 @@
+export interface SolicitudSimilar {nombrePrestacion: string, rubro: string, refuerzos: number};

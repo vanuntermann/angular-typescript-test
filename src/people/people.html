@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Calle</th>
+        <th>Altura</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="p in vm.people">
+        <td>{{p.nombre}}</td>
+        <td>{{p.apellido}}</td>
+        <td>{{p.domicilio.calle}}</td>
+        <td>{{p.domicilio.altura}}</td>
+    </tr>
+    </tbody>
+</table>

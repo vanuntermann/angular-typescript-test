@@ -1,0 +1,8 @@
+<h2>Create a new person</h2>
+<form ng-submit="vm.create()">
+    <input type="text" ng-model="vm.person.nombre" placeholder="Nombre">
+    <input type="text" ng-model="vm.person.apellido" placeholder="Apellido">
+    <input type="text" ng-model="vm.person.domicilio.calle" placeholder="Calle">
+    <input type="number" ng-model="vm.person.domicilio.altura" placeholder="Altura">
+    <button>Create</button>
+</form>
