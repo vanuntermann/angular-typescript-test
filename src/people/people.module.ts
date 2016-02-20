@@ -5,7 +5,7 @@ import {PeopleService} from './people.service.ts'
 
 module People {
 
-    export const people = angular.module('app.people', ['ui.router', 'ui.bootstrap'])
+    export const people = angular.module('app.people', ['ui.router'])
         .config(routes)
         .controller('PeopleController', PeopleController)
         .service('peopleService', PeopleService)

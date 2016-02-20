@@ -5,5 +5,5 @@ import {people} from '../people/people.module.ts'
 import {solicitudesSimilares} from '../solicitudes/solicitudes.similares.module.ts';
 
 
-angular.module('app', ['ui.router', 'ui.bootstrap', people, solicitudesSimilares])
+angular.module('app', ['ui.router', people, solicitudesSimilares])
     .config(routes);

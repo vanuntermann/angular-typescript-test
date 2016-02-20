@@ -7,7 +7,7 @@ import {usigMapDirective} from '../mapa/mapa.directive.ts';
 
 module SolicitudesSimilares {
 
-    export const solicitudesSimilares = angular.module('app.solicitudes.similares', ['ui.router', 'ui.bootstrap'])
+    export const solicitudesSimilares = angular.module('app.solicitudes.similares', ['ui.router'])
         .config(routes)
         .controller("SolicitudesSimilaresController", SolicitudesSimilaresController)
         .service("solicitudesSimilaresService", SolicitudesSimilaresService)
