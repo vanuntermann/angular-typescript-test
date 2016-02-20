@@ -18,7 +18,7 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.html$/, loader: 'ngtemplate!html-loader'},
-            {test: /\.ts$/, loader: 'ts-loader', exclude: [/node_modules/, /test/]}
+            {test: /\.ts$/, loader: 'ts-loader', exclude: [/node_modules/, __dirname + '/test']}
         ]
     },
 
