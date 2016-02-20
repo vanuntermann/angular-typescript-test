@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --progress --colors --content-base build --inline --history-api-fallback --output-public-path /",
     "build_prod": "webpack -p --env=production --config webpack.prod.js/",
+    "build_dev": "webpack",
     "test": "karma start & karma run",
     "tsd": "tsd install",
     "postinstall": "npm run tsd"
@@ -43,6 +44,7 @@
     "sinon-chai": "2.8.0",
     "source-map-support": "0.3.2",
     "ts-loader": "0.8.0",
+    "tsd": "^0.6.5",
     "typescript": "1.7.5",
     "webpack": "1.12.2",
     "webpack-config-loader": "0.1.0",
