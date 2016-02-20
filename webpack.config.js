@@ -12,7 +12,11 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
+        alias: {
+            "usig.mapa.interactivo.js": __dirname + "/vendor/usig-3.1/usig.MapaInteractivo.min.js",
+            "usig.punto.js": __dirname + "/vendor/usig-3.1/usig.Punto.min.js"
+        }
     },
 
     module: {
@@ -37,6 +41,12 @@ module.exports = {
         hot: true,
         inline: true,
         progress: true,
-        host: '0.0.0.0'
+        host: '0.0.0.0',
+        proxy: {
+            '/api/*': {
+                target: 'http://localhost:3000/*',
+                secure: false
+            }
+        }
     }
 };
