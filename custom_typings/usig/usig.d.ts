@@ -1,5 +1,7 @@
 declare class MapaInteractivo {
     addMarker(place: any, goTo: boolean, onClick: any, options: any) : number;
+    addMarker(place: any, goTo: boolean) : number;
+    addMarker(place: any) : number;
     goTo(point: any, zoomIn: boolean) : void;
 }
 

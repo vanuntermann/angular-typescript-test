@@ -1,4 +1,5 @@
 import {IStateProvider} from 'angular-ui-router';
+import {PlacesController} from './places.controller.ts';
 const templateUrl = require('./places.html');
 
 module Places {
@@ -9,6 +10,8 @@ module Places {
             .state('places', {
                 url: '/places',
                 templateUrl: templateUrl,
+                controller: PlacesController,
+                controllerAs: "placesController"
             });
     }
 }

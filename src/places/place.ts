@@ -1,1 +1,1 @@
-export interface Place { name: string };
+export interface Place {name: string, point: Punto};
