@@ -1,3 +1,4 @@
 import './app/app.module.ts';
-import * as $ from "jquery";
+require("expose?$!jquery");
+require("expose?jQuery!jquery");
 

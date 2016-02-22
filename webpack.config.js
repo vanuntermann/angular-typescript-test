@@ -1,14 +1,18 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: __dirname + '/src/app/app.module.ts'
+        app: __dirname + '/src/index.ts'
     },
 
     output: {
         path: __dirname + '/build',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: "/",
+        contentBase: "build",
+        pathinfo: true
     },
 
     resolve: {
@@ -25,15 +29,16 @@ module.exports = {
             {test: /\.ts$/, loader: 'ts-loader', exclude: [/node_modules/, __dirname + '/test']}
         ]
     },
-
     plugins: [
         new HtmlWebpackPlugin({title: 'angular test', template: 'index.html'}),
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
-            jquery: 'jquery'
+            jquery: 'jquery',
+            "window.jQuery": 'jquery'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new CopyWebpackPlugin([{from: "vendor/usig-3.1/images", to: "images"}])
     ],
     devtool: 'source-map',
     devServer: {

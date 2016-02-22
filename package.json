@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --progress --colors --content-base build --inline --history-api-fallback --output-public-path /",
-    "build_prod": "webpack -p --env=production --config webpack.prod.js/",
+    "build_prod": "webpack -p",
     "build_dev": "webpack",
     "test": "karma start & karma run",
     "tsd": "tsd install",
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "copy-webpack-plugin": "^1.1.1",
+    "expose-loader": "^0.7.1",
     "file-loader": "0.8.4",
     "html-loader": "^0.4.0",
     "html-webpack-plugin": "1.6.1",
