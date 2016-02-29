@@ -1,5 +1,6 @@
 import {IStateProvider} from 'angular-ui-router';
 import {PlacesController} from './places.controller.ts';
+import {PlacesService} from './places.service.ts';
 const templateUrl = require('./places.html');
 
 module Places {
@@ -11,7 +12,12 @@ module Places {
                 url: '/places',
                 templateUrl: templateUrl,
                 controller: PlacesController,
-                controllerAs: "placesController"
+                controllerAs: "placesController",
+                resolve: {
+                    places: (placesService : PlacesService) => {
+                        return placesService.all();
+                    }
+                }
             });
     }
 }

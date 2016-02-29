@@ -86,5 +86,21 @@
       "rubro": "Limpieza",
       "refuerzos": 14
     }
+  ],
+  "places": [
+    {
+      "name": "place 1",
+      "point": {
+        "x": 102224.9040681,
+        "y": 103284.11371559
+      }
+    },
+    {
+      "name": "place 2",
+      "point": {
+        "x": 103051,
+        "y": 101533
+      }
+    }
   ]
 }
