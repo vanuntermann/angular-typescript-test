@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "angular": "1.5.0",
+    "angular-ui-bootstrap": "^1.2.1",
     "angular-ui-router": "0.2.17"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "html-loader": "^0.4.0",
     "html-webpack-plugin": "1.6.1",
     "jquery": "^2.2.0",
+    "json-server": "^0.8.8",
     "karma": "^0.13.19",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.2",

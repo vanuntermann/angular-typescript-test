@@ -1,4 +1,11 @@
 <h1>Current places</h1>
+
+<h2>Search places</h2>
+<pre>query: {{placesController.searchQuery | json}}</pre>
+<input type="text" 
+  ng-model="placesController.searchQuery" 
+  uib-typeahead="p.name for p in placesController.places | filter:$viewValue | limitTo:8">
+
 <h2>Places on a list</h2>
 <div>
     <place-list places="placesController.places"></place-list>
