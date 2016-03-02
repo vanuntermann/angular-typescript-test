@@ -4,6 +4,7 @@
 <pre>query: {{placesController.searchQuery | json}}</pre>
 <input type="text" 
   ng-model="placesController.searchQuery" 
+  typeahead-on-select="placesController.onSearchQuerySelect($item, $model, $label, $event)"
   uib-typeahead="p.name for p in placesController.places | filter:$viewValue | limitTo:8">
 
 <h2>Places on a list</h2>
