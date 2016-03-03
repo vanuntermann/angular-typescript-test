@@ -1,10 +1,10 @@
-import {IStateProvider} from 'angular-ui-router';
-import {PlacesController} from './places.controller.ts';
-import {PlacesService} from './places.service.ts';
+import {IStateProvider} from "angular-ui-router";
+import {PlacesController} from "./places.controller.ts";
+import {PlacesService} from "./places.service.ts";
 const templateUrl = require('./places.html');
 
 module Places {
-    
+
     /*@ngInject*/
     export function routes($stateProvider:IStateProvider) {
         $stateProvider
@@ -12,12 +12,7 @@ module Places {
                 url: '/places',
                 templateUrl: templateUrl,
                 controller: PlacesController,
-                controllerAs: "placesController",
-                resolve: {
-                    places: (placesService : PlacesService) => {
-                        return placesService.all();
-                    }
-                }
+                controllerAs: "pc"
             });
     }
 }

@@ -12,9 +12,8 @@ module Places {
         }
 
         all() {
-            return this.$http.get<Place>(this.url)
+            return this.$http.get<Place[]>(this.url)
                 .then((response) => response.data)
-                .catch((response)=> { return console.log(response); });
         }
 
     }
