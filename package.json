@@ -4,7 +4,7 @@
   "repository": "http://git.hexacta.com/suaci2.git",
   "main": "src/app.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --progress --colors --content-base build --inline --history-api-fallback --output-public-path /",
+    "dev": "webpack-dev-server --progress --colors --content-base build --inline --history-api-fallback --output-public-path /",
     "build_prod": "webpack -p",
     "build_dev": "webpack",
     "test": "karma start",
