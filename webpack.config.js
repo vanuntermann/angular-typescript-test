@@ -25,6 +25,11 @@ module.exports = {
 
     module: {
         loaders: [
+            {test: /\.css$/, loader: 'style!css'},
+            {test: /\.woff2?$/, loader: 'file'},
+            {test: /\.ttf$/, loader: 'file'},
+            {test: /\.eot$/, loader: 'file'},
+            {test: /\.svg$/, loader: 'file'},
             {test: /\.html$/, loader: 'ngtemplate!html-loader'},
             {test: /\.ts$/, loader: 'ts-loader', exclude: [/node_modules/, __dirname + '/test']}
         ]

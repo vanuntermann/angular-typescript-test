@@ -2,7 +2,9 @@
 
 <h2>Search places</h2>
 <pre>query: {{placesController.searchQuery | json}}</pre>
-<input type="text" 
+<input 
+  class="form-control"
+  type="text" 
   ng-model="placesController.searchQuery" 
   typeahead-on-select="placesController.onSearchQuerySelect($item, $model, $label, $event)"
   uib-typeahead="p.name for p in placesController.places | filter:$viewValue | limitTo:8">
