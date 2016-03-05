@@ -21,7 +21,7 @@ module.exports = {
             "usig.mapa.interactivo.js": __dirname + "/vendor/usig-3.1/usig.MapaInteractivo.min.js",
             "usig.punto.js": __dirname + "/vendor/usig-3.1/usig.Punto.min.js",
             "bootstrap.css" : __dirname + "/node_modules/bootstrap/dist/css/bootstrap.css",
-            "BAstrap.css": __dirname + "/vendor/bastrap3/bastrap.css",
+            "BAstrap.css": __dirname + "/vendor/bastrap3/bastrap.css"
         }
     },
 
@@ -42,7 +42,8 @@ module.exports = {
             jQuery: 'jquery',
             $: 'jquery',
             jquery: 'jquery',
-            "window.jQuery": 'jquery'
+            "window.jQuery": 'jquery',
+            _: 'lodash'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new CopyWebpackPlugin([{from: "vendor/usig-3.1/images", to: "images"}])
