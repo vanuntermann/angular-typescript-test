@@ -9,24 +9,34 @@ describe("orFilter", function () {
         palabrasClaves: jsc.nestring });
     let prestacionesArb = jsc.array(prestacionArb);
 
-    jsc.property("filter", prestacionesArb, jsc.string, jsc.string,
-        function (prestaciones: Prestacion[], word: string, word2: string) {
-            let prestacion1 = {codigo: "codigo" , concepto: "concepto".concat(word), rubro: "rubro",
-                palabrasClaves: "palabra"};
-            let prestacion2 = {codigo: "codigo" , concepto: "concepto", rubro: "rubro ".concat(word),
-                palabrasClaves: "palabra"};
-            let prestacion3 = {codigo: "codigo" , concepto: "concepto", rubro: "rubro",
-                palabrasClaves: "palabra".concat(word)};
-            let plist = prestaciones.concat([prestacion1, prestacion2, prestacion3]);
+    jsc.property("filter", prestacionesArb, jsc.string, jsc.nestring,
+        function (prestaciones: Prestacion[], palabra: string, anyString: string) {
+            let prestacionNueva = crearPrestacion("concepto", "concepto-value ".concat(palabra), anyString);
+            let prestacion1 = {codigo: anyString , concepto: "concepto".concat(palabra), rubro: anyString,
+                palabrasClaves: anyString};
+            let prestacion2 = {codigo: anyString , concepto: anyString, rubro: "rubro ".concat(palabra),
+                palabrasClaves: anyString};
+            let prestacion3 = {codigo: anyString , concepto: anyString, rubro: anyString,
+                palabrasClaves: "palabra".concat(palabra)};
+            let plist = prestaciones.concat([prestacion1, prestacion2, prestacion3, prestacionNueva]);
 
-            return contains(orFilter()(plist, word), [prestacion1, prestacion2, prestacion3]);
-
-            function contains(xs, ys) {
-                return ys.every(function (y) {
-                    return xs.some(function (x) {
-                        return _.isEqual(x,y);
-                    })
-                })
-            }
+            return contains(orFilter()(plist, palabra), [prestacion1, prestacion2, prestacion3, prestacionNueva]);
         });
+
+
+    function crearPrestacion(key: string, valueOfKey: string, valueOfRestOfKeys: string ) : Prestacion {
+        let prestacion: Prestacion = {codigo: "" , concepto: "", rubro: "", palabrasClaves: ""};
+        Object.keys(prestacion).map(key => prestacion[key] = valueOfRestOfKeys);
+        prestacion[key] = valueOfKey;
+        return prestacion;
+    }
+
+    function contains(xs, ys) {
+        return ys.every(function (y) {
+            return xs.some(function (x) {
+                return _.isEqual(x,y);
+            })
+        })
+    }
+
 });
