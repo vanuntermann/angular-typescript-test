@@ -4,7 +4,6 @@ import routes from './app.routes.ts';
 import {people} from '../people/people.module.ts'
 import {solicitudesSimilares} from '../solicitudes/solicitudes.similares.module.ts';
 import {places} from '../places/places.module.ts';
-import 'bootstrap/dist/css/bootstrap.css';
 
 angular.module('app', ['ui.router', people, solicitudesSimilares, places])
     .config(routes);
