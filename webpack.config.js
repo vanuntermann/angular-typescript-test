@@ -19,7 +19,9 @@ module.exports = {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
         alias: {
             "usig.mapa.interactivo.js": __dirname + "/vendor/usig-3.1/usig.MapaInteractivo.min.js",
-            "usig.punto.js": __dirname + "/vendor/usig-3.1/usig.Punto.min.js"
+            "usig.punto.js": __dirname + "/vendor/usig-3.1/usig.Punto.min.js",
+            "bootstrap.css" : __dirname + "/node_modules/bootstrap/dist/css/bootstrap.css",
+            "BAstrap.css": __dirname + "/vendor/bastrap3/bastrap.css",
         }
     },
 
