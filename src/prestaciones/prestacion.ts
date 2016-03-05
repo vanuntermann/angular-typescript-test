@@ -1,0 +1,1 @@
+export interface Prestacion {codigo: string , concepto: string, rubro: string, palabrasClaves: string};
