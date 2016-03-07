@@ -26,7 +26,7 @@ describe("orFilter", function () {
 
     function crearPrestacion(key: string, valueOfKey: string, valueOfRestOfKeys: string ) : Prestacion {
         let prestacion: Prestacion = {codigo: "" , concepto: "", rubro: "", palabrasClaves: ""};
-        Object.keys(prestacion).map(key => prestacion[key] = valueOfRestOfKeys);
+        Object.keys(prestacion).forEach(key => prestacion[key] = valueOfRestOfKeys);
         prestacion[key] = valueOfKey;
         return prestacion;
     }
