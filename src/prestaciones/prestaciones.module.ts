@@ -5,6 +5,7 @@ import 'BAstrap.css';
 import './prestaciones.less';
 import {navbarComponent} from './navbar.component.ts';
 import {searchComponent} from './search.component.ts';
+import {searchCategoryComponent} from './search.category.component.ts';
 
 module Prestaciones {
 
@@ -13,6 +14,7 @@ module Prestaciones {
         .config(routes)
         .component('baNavbar', navbarComponent)
         .component('baReclamosSearch', searchComponent)
+        .component('baSearchCategory', searchCategoryComponent)
         .name;
 }
 

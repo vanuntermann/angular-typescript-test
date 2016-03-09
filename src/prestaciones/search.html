@@ -5,15 +5,7 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <div ng-repeat="c in $ctrl.categories" class="ba-search-category">
-            <span class="icon glyphicon glyphicon-tree-deciduous"></span>
-            <h3>{{ c.title }}</h3>
-            <ul>
-              <li ng-repeat="e in c.elements">
-                <h4>{{ e }}.<br><small>Secondary text.</small></h4>
-              </li>
-            </ul>
-          </div>
+          <ba-search-category ng-repeat="c in $ctrl.categories" category="c"></ba-search-category>
         </div>
       </div>
     </div>

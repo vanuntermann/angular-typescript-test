@@ -1,15 +1,14 @@
+import {SearchCategory} from './search.category.ts';
 const templateUrl = require('./search.html');
 
 module Prestaciones {
 
-    interface Category { title : string, elements : string[] }
-
-    function category(title : string, elements : string[]) : Category {
+    function category(title : string, elements : string[]) : SearchCategory {
       return { title: title, elements: elements };
     }
 
     export class SearchController {
-        categories : Category[];
+        categories : SearchCategory[];
 
         constructor() {
           this.categories = [
