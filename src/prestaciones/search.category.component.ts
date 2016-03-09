@@ -5,6 +5,14 @@ module Prestaciones {
 
     export class SearchCategoryController {
         category: SearchCategory;
+        toggleViewMore: () => void;
+        more: boolean;
+        constructor() {
+          this.more = false;
+          this.toggleViewMore = () => {
+            this.more = !this.more;
+          }
+        }
     }
 
     export let searchCategoryComponent =  {

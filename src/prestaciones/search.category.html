@@ -1,9 +1,12 @@
 <div class="ba-search-category">
   <span class="icon glyphicon glyphicon-tree-deciduous"></span>
   <h3>{{ $ctrl.category.title }}</h3>
-  <ul>
+  <ul ng-show="$ctrl.more">
     <li ng-repeat="e in $ctrl.category.elements">
       <h4>{{ e }}<br><small>Secondary text</small></h4>
     </li>
   </ul>
+  <div class="controls">
+    <a ng-click="$ctrl.toggleViewMore()">Ver {{ $ctrl.more ? 'menos' : 'más' }}</a>
+  </div>
 </div>
