@@ -4,6 +4,7 @@ import 'bootstrap.css';
 import 'BAstrap.css';
 import './prestaciones.less';
 import {navbarComponent} from './navbar.component.ts';
+import {searchComponent} from './search.component.ts';
 
 module Prestaciones {
 
@@ -11,6 +12,7 @@ module Prestaciones {
     export const prestaciones = angular.module('app.prestaciones', ['ui.bootstrap', 'ui.router'])
         .config(routes)
         .component('baNavbar', navbarComponent)
+        .component('baReclamosSearch', searchComponent)
         .name;
 }
 

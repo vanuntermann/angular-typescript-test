@@ -1,0 +1,28 @@
+  <section>
+    <div class="container">
+      <div class="row row-shortcut">
+        <h2>Hacé tu reclamo</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div ng-repeat="c in $ctrl.categories" class="ba-search-category">
+            <span class="icon glyphicon glyphicon-tree-deciduous"></span>
+            <h3>{{ c.title }}</h3>
+            <ul>
+              <li ng-repeat="e in c.elements">
+                <h4>{{ e }}.<br><small>Secondary text.</small></h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="big-heading">
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <p><a class="btn btn-lg btn-default">Ver todas</a></p>
+        </div>
+      </div>
+  </section>
+
