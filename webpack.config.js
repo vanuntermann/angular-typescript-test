@@ -27,8 +27,10 @@ module.exports = {
 
     module: {
         loaders: [
+            {test: /\.less$/, loader: 'style!css!less', exclude: [/node_modules/]},
             {test: /\.css$/, loader: 'style!css'},
             {test: /\.woff2?$/, loader: 'file'},
+            {test: /\.png$/, loader: 'file'},
             {test: /\.ttf$/, loader: 'file'},
             {test: /\.eot$/, loader: 'file'},
             {test: /\.svg$/, loader: 'file'},
