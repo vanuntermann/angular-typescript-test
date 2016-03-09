@@ -4,8 +4,8 @@
         <h2>Hacé tu reclamo</h2>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <ba-search-category ng-repeat="c in $ctrl.categories" category="c"></ba-search-category>
+        <div ng-repeat="cgroup in $ctrl.categories" class="col-md-4">
+          <ba-search-category ng-repeat="c in cgroup" category="c"></ba-search-category>
         </div>
       </div>
     </div>
