@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -27,7 +28,7 @@ module.exports = {
 
     module: {
         loaders: [
-            {test: /\.less$/, loader: 'style!css!less', exclude: [/node_modules/]},
+            {test: /\.less$/, loader: ExtractTextPlugin.extract('css?sourceMap!less?sourceMap'), exclude: [/node_modules/]},
             {test: /\.css$/, loader: 'style!css'},
             {test: /\.woff2?$/, loader: 'file'},
             {test: /\.png$/, loader: 'file'},
@@ -48,7 +49,8 @@ module.exports = {
             _: 'lodash'
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new CopyWebpackPlugin([{from: "vendor/usig-3.1/images", to: "images"}])
+        new CopyWebpackPlugin([{from: "vendor/usig-3.1/images", to: "images"}]),
+        new ExtractTextPlugin('styles.css')
     ],
     devtool: 'source-map',
     devServer: {
