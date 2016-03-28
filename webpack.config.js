@@ -2,6 +2,9 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var magicGlobals = new webpack.DefinePlugin({
+  __VERSION__: JSON.stringify(require('./package').version)
+});
 
 module.exports = {
     entry: {
@@ -50,7 +53,8 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
         new CopyWebpackPlugin([{from: "vendor/usig-3.1/images", to: "images"}]),
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('styles.css'),
+        magicGlobals
     ],
     devtool: 'source-map',
     devServer: {
