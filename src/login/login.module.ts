@@ -5,10 +5,14 @@ module Login {
 
     export const login = angular.module('app.login', ['ui.router', 'satellizer'])
         .config(routes)
-        .controller('LoginCtrl', function($scope, $auth) {
+        .controller('LoginCtrl', function($scope, $auth, $http, $location, $window) {
 
             $scope.authenticate = function(provider) {
-                $auth.authenticate(provider);
+                $auth.authenticate(provider).then(function (successfulRequest) {
+                  // we have to do this (or something similar) ourselves:
+                  $window.location.href = successfulRequest.config.data.redirectUri;
+                  // satellizer is not meant to redirect the main window for us.
+                });
             };
 
         })
