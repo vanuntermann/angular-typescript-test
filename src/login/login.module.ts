@@ -5,7 +5,7 @@ module Login {
 
     export const login = angular.module('app.login', ['ui.router', 'satellizer'])
         .config(routes)
-        .controller('LoginCtrl', function($scope, $auth, $http, $location, $window) {
+        .controller('LoginCtrl', function($scope, $auth, $window) {
 
             $scope.authenticate = function(provider) {
                 $auth.authenticate(provider).then(function (successfulRequest) {
